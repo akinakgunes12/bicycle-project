@@ -1,0 +1,144 @@
+/*
+COLORS
+
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-weight: 400;
+  padding: 30px;
+}
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.4),
+      rgba(40, 180, 31, 0.4)
+    ),
+    url(../img/manuel-will-ZYE-LqEBtbo-unsplash.jpg);
+  height: 95vh;
+  background-size: cover;
+  background-position: 10% 80%;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  position: relative;
+}
+.logo-box {
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+.logo {
+  height: 12vh;
+}
+.header-texts {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-header {
+  letter-spacing: 15px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+}
+.sub-header {
+  letter-spacing: 7.8px;
+  font-weight: 700;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.btn {
+  padding: 15px 30px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  animation-name: moveInBottom;
+  animation-duration: 2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px (rgba(0, 0, 0, 0.3));
+}
+.btn-white {
+  color: #777;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.btn::after {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  position: absolute;
+  z-index: -1;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  background-color: #fff;
+  transition: all 0.4s;
+  opacity: 0;
+}
