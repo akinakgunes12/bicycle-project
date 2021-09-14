@@ -1,0 +1,15 @@
+.heading-primary {
+  &--main {
+    letter-spacing: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+  }
+  &--sub {
+    letter-spacing: 7.8px;
+    font-weight: 700;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+  }
+}
