@@ -38,3 +38,24 @@
     z-index: -1;
   }
 }
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+    transform: translateY(0);
+  }
+  &:active {
+    box-shadow: 0 1em 2em rgba($color-black, $alpha: 0.25);
+    transform: translateY(-2px);
+  }
+}
