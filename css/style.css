@@ -136,6 +136,103 @@ body {
   box-shadow: 0 1em 2em rgba(0, 0, 0, 0.25);
   transform: translateY(-2px); }
 
+.card {
+  perspective: 150em;
+  position: relative;
+  height: 20em; }
+  .card--side {
+    background-color: orangered;
+    color: white;
+    font-size: 1.5em;
+    height: 20em;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1em 3em rgba(0, 0, 0, 0.3); }
+    .card--side--front {
+      background-color: orangered;
+      transform: rotateY(0deg); }
+    .card--side--back {
+      background-color: yellowgreen;
+      transform: rotateY(180deg); }
+      .card--side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card--side--back-2 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      .card--side--back-3 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  .card:hover .card--side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card--side--back {
+    transform: rotateY(0deg); }
+  .card-picture {
+    height: 50%;
+    background-size: cover;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%); }
+    .card-picture-1 {
+      background-image: url("/img/tour4.jpg"), linear-gradient(to right bottom, #ffb900, #ff7730); }
+    .card-picture-2 {
+      background-image: url("/img/snow.jpg"), linear-gradient(to right bottom, #2998ff, #5643fa); }
+    .card-picture-3 {
+      background-image: url("/img/tour3.webp"), linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.composition {
+  position: relative; }
+  .composition-photo {
+    width: 55%;
+    box-shadow: 0 1em 2.5em rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 15px; }
+    .composition-photo--p1 {
+      left: 0em;
+      top: -2em; }
+    .composition-photo--p2 {
+      right: 0em;
+      top: -0.5em; }
+    .composition-photo--p3 {
+      left: 30%;
+      top: 2em;
+      max-width: 12em;
+      max-height: 14em; }
+    .composition-photo:hover {
+      transform: scale(1.1) translateY(-0.5em);
+      box-shadow: 0em 2.5em 4em rgba(0, 0, 0, 0.5);
+      border-radius: 5px solid green;
+      z-index: 20;
+      outline: 0.8em solid #55c57a; }
+  .composition:hover .composition-photo:not(hover) {
+    transform: scale(0.9); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  padding: 25px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5em 4em rgba(0, 0, 0, 0.2);
+  transition: all 0.2s; }
+  .feature-box--icon {
+    font-size: 30px;
+    margin-bottom: 0.5em;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block; }
+  .feature-box:hover {
+    transform: translateY(-1em) scale(1.03); }
+  .feature-boxtext {
+    font-size: 16px; }
+
 .row {
   max-width: 1140px;
   margin: 0 auto; }
@@ -169,6 +266,7 @@ body {
   background-position: 10% 80%;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   position: relative; }
   .header__logo-box {
     top: 20px;
@@ -202,5 +300,19 @@ body {
 
 .section-about {
   background-color: #faf7f7;
-  padding: 10em 0;
+  padding: 20em 0;
   margin-top: -15vh; }
+
+.section-features {
+  background-color: #faf7f7;
+  padding: 20em 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.4)), url(../img/asd.jpg);
+  transform: skewY(-7deg);
+  margin-top: -10em; }
+  .section-features > * {
+    transform: skewY(7deg); }
+
+.section-tour {
+  background-color: #faf7f7;
+  margin-top: -10em;
+  padding: 25em 0 40em 0; }

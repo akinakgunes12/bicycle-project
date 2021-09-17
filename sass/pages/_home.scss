@@ -1,5 +1,26 @@
 .section-about {
   background-color: $color-grey-light-1;
-  padding: 10em 0;
+  padding: 20em 0;
   margin-top: -15vh;
+}
+
+.section-features {
+  background-color: $color-grey-light-1;
+  padding: 20em 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.4),
+      rgba($color-primary-dark, 0.4)
+    ),
+    url(../img/asd.jpg);
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(7deg);
+  }
+  margin-top: -10em;
+}
+.section-tour {
+  background-color: $color-grey-light-1;
+  margin-top: -10em;
+  padding: 25em 0 40em 0;
 }
