@@ -85,18 +85,31 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 15px; }
 
+.u-margin-top-big {
+  margin-top: 16em; }
+
 .btn {
   padding: 15px 30px;
   text-decoration: none;
   display: inline-block;
   position: relative;
   animation-name: moveInBottom;
-  animation-duration: 2s; }
+  animation-duration: 2s;
+  text-transform: uppercase; }
   .btn-white {
+    font-size: 16px;
     color: #777;
     background-color: #fff;
     border-radius: 20px;
     margin-top: 30px; }
+    .btn-white::after {
+      background-color: #fff; }
+  .btn-green {
+    color: #fff;
+    background-color: #55c57a;
+    border-radius: 20px; }
+    .btn-green::after {
+      background-color: #55c57a; }
   .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
@@ -155,7 +168,7 @@ body {
     border-radius: 3px;
     box-shadow: 0 1em 3em rgba(0, 0, 0, 0.3); }
     .card--side--front {
-      background-color: orangered;
+      background-color: #fff;
       transform: rotateY(0deg); }
     .card--side--back {
       background-color: yellowgreen;
@@ -175,13 +188,61 @@ body {
     background-size: cover;
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%); }
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
     .card-picture-1 {
       background-image: url("/img/tour4.jpg"), linear-gradient(to right bottom, #ffb900, #ff7730); }
     .card-picture-2 {
       background-image: url("/img/snow.jpg"), linear-gradient(to right bottom, #2998ff, #5643fa); }
     .card-picture-3 {
       background-image: url("/img/tour3.webp"), linear-gradient(to right bottom, #7ed56f, #28b485); }
+  .card-heading {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: absolute;
+    top: 4em;
+    right: 1em;
+    text-align: right;
+    width: 50%; }
+  .card-heading-span {
+    box-decoration-break: clone; }
+    .card-heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card-heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+    .card-heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+  .card-details {
+    text-align: center; }
+    .card-details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+    .card-details li {
+      padding: 0.6em;
+      text-align: center;
+      color: #777;
+      font-size: 0.8em; }
+      .card-details li:not(:last-child) {
+        border-bottom: 1px solid #eee; }
+  .card-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card-price-box {
+    text-align: center; }
+  .card-price-only {
+    font-size: 0.8em;
+    padding: 1em;
+    text-transform: uppercase; }
+  .card-price-value {
+    font-size: 2em;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100; }
 
 .composition {
   position: relative; }
@@ -232,6 +293,14 @@ body {
     transform: translateY(-1em) scale(1.03); }
   .feature-boxtext {
     font-size: 16px; }
+
+.story {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 3em 6em rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 4em; }
 
 .row {
   max-width: 1140px;
@@ -315,4 +384,9 @@ body {
 .section-tour {
   background-color: #faf7f7;
   margin-top: -10em;
-  padding: 25em 0 40em 0; }
+  padding: 25em 0 12em 0; }
+
+.section-stories {
+  background-color: #faf7f7;
+  margin-top: 0em;
+  padding: 2em 0 40em 0; }

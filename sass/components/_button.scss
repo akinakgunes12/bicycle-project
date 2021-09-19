@@ -5,12 +5,26 @@
   position: relative;
   animation-name: moveInBottom;
   animation-duration: 2s;
+  text-transform: uppercase;
 
   &-white {
+    font-size: $default-font-size;
     color: $color-grey-dark;
     background-color: $color-white;
     border-radius: 20px;
     margin-top: 30px;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &-green {
+    color: $color-white;
+    background-color: $color-primary;
+    border-radius: 20px;
+
+    &::after {
+      background-color: $color-primary;
+    }
   }
 
   &:hover {
