@@ -91,6 +91,9 @@ body {
 .u-margin-top-small {
   margin-top: 4em; }
 
+.u-margin-top-smaller {
+  margin-top: 2em; }
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -311,6 +314,55 @@ body {
   .feature-boxtext {
     font-size: 16px; }
 
+.form-group:not(:last-child) {
+  margin-bottom: 1em;
+  font-size: 16px; }
+
+.form-input {
+  font-size: 16px;
+  color: inherit;
+  font-family: inherit;
+  padding: 1em;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  width: 90%;
+  display: block; }
+  .form-input:focus {
+    outline: none;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #55c57a; }
+  .form-input:focus:invalid {
+    border-bottom: 5px solid #ff7730; }
+
+.form-label {
+  font-weight: 700;
+  margin-left: 0.5em;
+  transition: all 0.8s; }
+
+.form-input:placeholder-shown + .form-label {
+  opacity: 0;
+  visibility: hidden; }
+
+.form-radio-group:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  position: relative;
+  background-color: #d1d3d1;
+  display: inline-block; }
+
+.form-radio-input:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  position: relative;
+  background-color: #55c57a;
+  left: -0.1em;
+  content: '';
+  display: inline-block;
+  margin-right: 1em; }
+
 .story {
   width: 80%;
   margin: 0 auto;
@@ -426,6 +478,93 @@ body {
     transform: skewY(2deg) skewX(15deg) scale(1.05);
     text-shadow: 0.2em 0.4em 0.8em rgba(0, 0, 0, 0.5); }
 
+.footer {
+  background-color: #444444;
+  padding: 8em 0;
+  font-size: 14px;
+  position: relative; }
+  .footer-logo-box {
+    text-align: center;
+    margin-bottom: 2em; }
+  .footer-logo {
+    width: 10em;
+    height: auto;
+    margin-top: -4em;
+    margin-bottom: 2em; }
+  .footer-navigation {
+    border-top: 1px solid #faf7f7;
+    padding-top: 2em; }
+  .footer-list {
+    list-style: none; }
+  .footer-item {
+    display: inline-block; }
+    .footer-item:not(:last-child) {
+      margin-right: 1em; }
+  .footer-link {
+    display: inline-block; }
+    .footer-link:link, .footer-link:visited {
+      color: #faf7f7;
+      text-decoration: none;
+      text-transform: uppercase; }
+    .footer-link:hover, .footer-link:active {
+      color: #55c57a;
+      box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.4);
+      transform: rotate(5deg) scale(1.3); }
+  .footer-copyright {
+    border-top: 1px solid #faf7f7;
+    color: #faf7f7;
+    padding-top: 2em;
+    width: 80%;
+    float: right;
+    margin-right: -4em; }
+  .footer-text:hover {
+    display: inline-block;
+    color: #55c57a;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.4);
+    transition: all 1s;
+    transform: rotate(-360deg) translateX(40%) scale(1.5); }
+
+.navigation-checkbox {
+  display: none; }
+
+.navigation-button {
+  width: 7em;
+  height: 7em;
+  position: fixed;
+  z-index: 100;
+  top: 3.5em;
+  right: 0.5em; }
+
+.navigation-background {
+  height: 4em;
+  width: 4em;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+  position: fixed;
+  border-radius: 50%;
+  z-index: 20;
+  top: 2em;
+  right: 4em;
+  transform: scale(80); }
+
+.navigation-nav {
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 50; }
+
+.navigation-list {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  list-style: none;
+  text-align: center; }
+
+.navigation-link {
+  text-decoration: none; }
+
 .section-about {
   background-color: #faf7f7;
   padding: 20em 0;
@@ -448,5 +587,20 @@ body {
 .section-stories {
   position: relative;
   margin-top: 0em;
-  padding: 2em 0 40em 0;
+  padding: 7em 0 10em 0;
   z-index: 1; }
+
+.section-book {
+  padding: 5em 0 30em 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("/img/booking1.jpg");
+  background-size: cover;
+  background-position: 30% 70%;
+  height: 35em;
+  border-radius: 3px;
+  box-shadow: 0 1.5em 3em rgba(0, 0, 0, 0.2); }
+  .book-form {
+    padding: 5em;
+    width: 50%; }

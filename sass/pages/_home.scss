@@ -27,6 +27,33 @@
 .section-stories {
   position: relative;
   margin-top: 0em;
-  padding: 2em 0 40em 0;
+  padding: 7em 0 10em 0;
   z-index: 1;
+}
+.section-book {
+  padding: 5em 0 30em 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url('/img/booking1.jpg');
+  background-size: cover;
+  background-position: 30% 70%;
+  height: 35em;
+  border-radius: 3px;
+  box-shadow: 0 1.5em 3em rgba($color-black, 0.2);
+
+  &-form {
+    padding: 5em;
+    width: 50%;
+  }
 }
