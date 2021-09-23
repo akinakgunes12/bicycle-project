@@ -28,10 +28,10 @@
   position: relative;
   margin-top: 0em;
   padding: 7em 0 10em 0;
-  z-index: 1;
+  z-index: 100;
 }
 .section-book {
-  padding: 5em 0 30em 0;
+  padding: 9em 0 9em 0;
   background-image: linear-gradient(
     to right bottom,
     $color-primary-light,

@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-grey-darker;
-  padding: 8em 0;
+  padding: 4em 0;
   font-size: 14px;
   position: relative;
 
@@ -10,10 +10,10 @@
   }
 
   &-logo {
-    width: 10em;
+    width: 8em;
     height: auto;
-    margin-top: -4em;
-    margin-bottom: 2em;
+    margin-top: 0em;
+    margin-bottom: 1em;
   }
   &-navigation {
     border-top: 1px solid $color-grey-light-1;
