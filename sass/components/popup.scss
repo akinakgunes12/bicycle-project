@@ -6,19 +6,45 @@
   position: fixed;
   background-color: rgba($color-black, 0.8);
   z-index: 1000;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  &-close {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      display: inline-block;
+      font-size: 2em;
+      top: 1em;
+      right: 1em;
+      position: absolute;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+    &:hover {
+      transform: scale(1.2);
+      color: $color-primary;
+    }
+  }
   &-content {
     @include absCenter;
-
     width: 75%;
-
     background-color: $color-white;
     box-shadow: 0 2em 4em (rgba($color-black, 0.2));
     display: table;
     overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s;
   }
-
+  &:target &-content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
   &-left {
     width: 33.3333333%;
     display: table-cell;
@@ -36,11 +62,9 @@
   &-text {
     font-size: 14px;
     margin-bottom: 2em;
-
     column-count: 2;
     column-gap: 5em;
     column-rule: 2px solid $color-grey-light-1;
-
     hyphens: auto;
   }
 }

@@ -421,7 +421,23 @@ body {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  display: none; }
+  opacity: 0;
+  visibility: hidden; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup-close:link, .popup-close:visited {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    top: 1em;
+    right: 1em;
+    position: absolute;
+    transition: all 0.2s;
+    line-height: 1; }
+  .popup-close:hover {
+    transform: scale(1.2);
+    color: #55c57a; }
   .popup-content {
     position: absolute;
     top: 50%;
@@ -431,7 +447,13 @@ body {
     background-color: #fff;
     box-shadow: 0 2em 4em rgba(0, 0, 0, 0.2);
     display: table;
-    overflow: hidden; }
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s; }
+  .popup:target .popup-content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
   .popup-left {
     width: 33.3333333%;
     display: table-cell; }
