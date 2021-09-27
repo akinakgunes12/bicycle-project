@@ -1,13 +1,13 @@
 .card {
-  perspective: 150em;
+  perspective: 240rem;
   position: relative;
-  height: 20em;
+  height: 32rem;
 
   &--side {
     background-color: orangered;
     color: white;
-    font-size: 1.5em;
-    height: 20em;
+    font-size: 2.4rem;
+    height: 48rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -16,7 +16,7 @@
     overflow: hidden;
     width: 100%;
     border-radius: 3px;
-    box-shadow: 0 1em 3em rgba($color-black, 0.3);
+    box-shadow: 0 1.6em 4.8em rgba($color-black, 0.3);
     &--front {
       background-color: $color-white;
       transform: rotateY(0deg);
@@ -90,12 +90,12 @@
   }
   &-heading {
     color: $color-white;
-    font-size: 1.2em;
+    font-size: 2.8rem;
     font-weight: 300;
     text-transform: uppercase;
     position: absolute;
-    top: 4em;
-    right: 1em;
+    top: 11.2rem;
+    right: 3.2rem;
     text-align: right;
     width: 50%;
   }
@@ -132,10 +132,10 @@
       margin: 0 auto;
     }
     li {
-      padding: 0.6em;
+      padding: 1.2rem;
       text-align: center;
       color: $color-grey-dark;
-      font-size: 0.8em;
+      font-size: 1.9rem;
 
       &:not(:last-child) {
         border-bottom: 1px solid $color-grey-medium;
@@ -152,12 +152,12 @@
     text-align: center;
   }
   &-price-only {
-    font-size: 0.8em;
-    padding: 1em;
+    font-size: 1.9rem;
+    padding: 1.9rem;
     text-transform: uppercase;
   }
   &-price-value {
-    font-size: 2em;
+    font-size: 4.8rem;
     font-family: 'Roboto Mono', monospace;
     font-weight: 100;
   }

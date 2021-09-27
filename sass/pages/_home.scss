@@ -1,12 +1,12 @@
 .section-about {
   background-color: $color-grey-light-1;
-  padding: 20em 0;
+  padding: 32rem 0;
   margin-top: -15vh;
 }
 
 .section-features {
   background-color: $color-grey-light-1;
-  padding: 20em 0;
+  padding: 32rem 0;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.4),
@@ -17,21 +17,21 @@
   & > * {
     transform: skewY(7deg);
   }
-  margin-top: -10em;
+  margin-top: -16rem;
 }
 .section-tour {
   background-color: $color-grey-light-1;
-  margin-top: -10em;
-  padding: 25em 0 12em 0;
+  margin-top: -16rem;
+  padding: 40rem 0 19.2rem 0;
 }
 .section-stories {
   position: relative;
-  margin-top: 0em;
-  padding: 7em 0 10em 0;
+  margin-top: 0rem;
+  padding: 12.8rem 0 14.4rem 0;
   z-index: 100;
 }
 .section-book {
-  padding: 9em 0 9em 0;
+  padding: 16rem 0 16rem 0;
   background-image: linear-gradient(
     to right bottom,
     $color-primary-light,
@@ -48,12 +48,12 @@
     url('/img/booking1.jpg');
   background-size: cover;
   background-position: 30% 70%;
-  height: 35em;
-  border-radius: 3px;
-  box-shadow: 0 1.5em 3em rgba($color-black, 0.2);
+  height: 56rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 2.4rem 4.8rem rgba($color-black, 0.2);
 
   &-form {
-    padding: 5em;
+    padding: 8rem;
     width: 50%;
   }
 }

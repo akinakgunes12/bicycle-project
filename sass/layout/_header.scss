@@ -14,8 +14,8 @@
   position: relative;
 
   &__logo-box {
-    top: 20px;
-    left: 20px;
+    top: 1.5rem;
+    left: 1.5rem;
     position: absolute;
   }
   &__logo {
@@ -29,15 +29,17 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 1.8rem;
   }
 }
 
 .heading-biketour {
-  font-size: 30px;
+  font-size: 3.5rem;
+  margin-bottom: 6rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.5rem;
   background-image: linear-gradient(
     to right,
     $color-primary-light,
@@ -51,6 +53,6 @@
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.05);
 
-    text-shadow: 0.2em 0.4em 0.8em rgba($color-black, 0.5);
+    text-shadow: 0.2rem 0.4rem 0.8rem rgba($color-black, 0.5);
   }
 }
