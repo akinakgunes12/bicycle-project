@@ -10,21 +10,36 @@
     outline-offset: 1.6rem;
 
     @include respond(tab-port) {
-      padding: 10rem 0 10rem 0;
+      float: left;
+      position: relative;
+      width: 33.33333%;
     }
     &--p1 {
       left: 0rem;
       top: -3.2rem;
+      @include respond(tab-port) {
+        top: -1rem;
+        left: 2rem;
+      }
     }
     &--p2 {
-      right: 0rem;
-      top: -0.8rem;
-    }
-    &--p3 {
       left: 30%;
       top: 3.2rem;
       max-width: 19.2rem;
       max-height: 22.4rem;
+      @include respond(tab-port) {
+        left: 0rem;
+        max-height: 15rem;
+        top: -3.3rem;
+        z-index: 20;
+      }
+    }
+    &--p3 {
+      right: 0rem;
+      top: -0.8rem;
+      @include respond(tab-port) {
+        left: -2rem;
+      }
     }
     &:hover {
       transform: scale(1.1) translateY(-0.5rem);

@@ -18,6 +18,10 @@
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;
+
+    @include respond(tab-port) {
+      margin-bottom: 0.4rem;
+    }
   }
   &:hover {
     transform: translateY(-1.6rem) scale(1.03);

@@ -158,7 +158,8 @@ html {
   position: relative;
   animation-name: moveInBottom;
   animation-duration: 2s;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center; }
   .btn-white {
     font-size: 1.4rem;
     color: #777;
@@ -279,10 +280,10 @@ html {
     font-weight: 300;
     text-transform: uppercase;
     position: absolute;
-    top: 11.2rem;
+    top: 11.6rem;
     right: 3.2rem;
     text-align: right;
-    width: 50%; }
+    width: 45%; }
   .card-heading-span {
     box-decoration-break: clone; }
     .card-heading-span--1 {
@@ -319,6 +320,41 @@ html {
     font-size: 4.8rem;
     font-family: 'Roboto Mono', monospace;
     font-weight: 100; }
+  @media (max-width: 56.25em) {
+    .card {
+      box-shadow: 0 1.6rem 4.8rem 3rem rgba(0, 0, 0, 0.3);
+      height: 71rem;
+      margin-bottom: 5rem;
+      background-color: #fff; }
+      .card-picture {
+        height: 25rem; }
+      .card-btn {
+        margin-bottom: 2rem; }
+      .card--side {
+        font-size: 2.4rem;
+        height: auto;
+        transition: all 0.8s ease;
+        position: relative;
+        border-radius: 3px;
+        box-shadow: none; }
+        .card--side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%); }
+      .card:hover .card--side--front {
+        transform: rotateY(0); }
+      .card-cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        text-align: center;
+        padding: 3rem 2rem 2rem 2rem;
+        height: 25rem; }
+        .card-cta-price-box {
+          text-align: center; }
+        .card-cta-price-value {
+          font-size: 4.8rem; } }
 
 .composition {
   position: relative; }
@@ -332,18 +368,33 @@ html {
     outline-offset: 1.6rem; }
     @media (max-width: 56.25em) {
       .composition-photo {
-        padding: 10rem 0 10rem 0; } }
+        float: left;
+        position: relative;
+        width: 33.33333%; } }
     .composition-photo--p1 {
       left: 0rem;
       top: -3.2rem; }
+      @media (max-width: 56.25em) {
+        .composition-photo--p1 {
+          top: -1rem;
+          left: 2rem; } }
     .composition-photo--p2 {
-      right: 0rem;
-      top: -0.8rem; }
-    .composition-photo--p3 {
       left: 30%;
       top: 3.2rem;
       max-width: 19.2rem;
       max-height: 22.4rem; }
+      @media (max-width: 56.25em) {
+        .composition-photo--p2 {
+          left: 0rem;
+          max-height: 15rem;
+          top: -3.3rem;
+          z-index: 20; } }
+    .composition-photo--p3 {
+      right: 0rem;
+      top: -0.8rem; }
+      @media (max-width: 56.25em) {
+        .composition-photo--p3 {
+          left: -2rem; } }
     .composition-photo:hover {
       transform: scale(1.1) translateY(-0.5rem);
       box-shadow: 0rem 4rem 6.4rem rgba(0, 0, 0, 0.5);
@@ -368,6 +419,9 @@ html {
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block; }
+    @media (max-width: 56.25em) {
+      .feature-box--icon {
+        margin-bottom: 0.4rem; } }
   .feature-box:hover {
     transform: translateY(-1.6rem) scale(1.03); }
   .feature-boxtext {
@@ -823,7 +877,7 @@ html {
     transform: skewY(7deg); }
   @media (max-width: 56.25em) {
     .section-features {
-      padding: 10rem 0; } }
+      padding: 10rem 0 4rem 0; } }
 
 .section-tour {
   background-color: #faf7f7;
