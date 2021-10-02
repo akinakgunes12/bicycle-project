@@ -8,6 +8,7 @@ body {
   padding: 3rem;
   color: $color-grey-dark;
   box-sizing: border-box;
+  
 
   @include respond(tab-port) {
     //width < 900  1rem = 4.8px 4.8/16 = 50%

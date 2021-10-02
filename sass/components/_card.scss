@@ -3,6 +3,10 @@
   position: relative;
   height: 32rem;
 
+  @include respond(tab-port) {
+    margin-bottom: 15rem;
+  }
+
   &--side {
     background-color: orangered;
     color: white;
@@ -16,7 +20,7 @@
     overflow: hidden;
     width: 100%;
     border-radius: 3px;
-    box-shadow: 0 1.6em 4.8em rgba($color-black, 0.3);
+    box-shadow: 0 1.6rem 4.8rem rgba($color-black, 0.3);
     &--front {
       background-color: $color-white;
       transform: rotateY(0deg);
@@ -63,6 +67,7 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+
     &-1 {
       background-image: url('/img/tour4.jpg'),
         linear-gradient(
@@ -70,6 +75,9 @@
           $color-secondary-light,
           $color-secondary-dark
         );
+      @include respond(tab-port) {
+        background-position: 35% 65%;
+      }
     }
     &-2 {
       background-image: url('/img/snow.jpg'),
@@ -78,6 +86,9 @@
           $color-tertiary-light,
           $color-tertiary-dark
         );
+      @include respond(tab-port) {
+        background-position: 35% 45%;
+      }
     }
     &-3 {
       background-image: url('/img/tour3.webp'),
@@ -86,6 +97,9 @@
           $color-primary-light,
           $color-primary-dark
         );
+      @include respond(tab-port) {
+        background-position: 35% 45%;
+      }
     }
   }
   &-heading {

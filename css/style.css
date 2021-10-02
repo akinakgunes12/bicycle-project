@@ -70,7 +70,7 @@ html {
       font-size: 75%; } }
 
 .heading-primary--main {
-  letter-spacing: 1.6rem;
+  letter-spacing: 1.2rem;
   font-weight: 400;
   margin-bottom: 1.6rem;
   animation-name: moveInLeft;
@@ -100,7 +100,7 @@ html {
       font-size: 1.7rem; } }
   @media (max-width: 37.5em) {
     .heading-tertiary {
-      font-size: 1.5rem; } }
+      font-size: 1.6rem; } }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -112,6 +112,9 @@ html {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 3rem !important; } }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem; }
@@ -121,12 +124,18 @@ html {
 
 .u-margin-top-big {
   margin-top: 25.6rem; }
+  @media (max-width: 56.25em) {
+    .u-margin-top-big {
+      margin-top: 10rem !important; } }
 
 .u-margin-top-small {
   margin-top: 6.4rem; }
 
 .u-margin-top-smaller {
   margin-top: 3.2rem; }
+
+.u-margin-top-medium {
+  margin-top: 12rem; }
 
 .bg-video {
   position: absolute;
@@ -208,6 +217,9 @@ html {
   perspective: 240rem;
   position: relative;
   height: 32rem; }
+  @media (max-width: 56.25em) {
+    .card {
+      margin-bottom: 15rem; } }
   .card--side {
     background-color: orangered;
     color: white;
@@ -221,7 +233,7 @@ html {
     overflow: hidden;
     width: 100%;
     border-radius: 3px;
-    box-shadow: 0 1.6em 4.8em rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 1.6rem 4.8rem rgba(0, 0, 0, 0.3); }
     .card--side--front {
       background-color: #fff;
       transform: rotateY(0deg); }
@@ -248,10 +260,19 @@ html {
     border-top-right-radius: 3px; }
     .card-picture-1 {
       background-image: url("/img/tour4.jpg"), linear-gradient(to right bottom, #ffb900, #ff7730); }
+      @media (max-width: 56.25em) {
+        .card-picture-1 {
+          background-position: 35% 65%; } }
     .card-picture-2 {
       background-image: url("/img/snow.jpg"), linear-gradient(to right bottom, #2998ff, #5643fa); }
+      @media (max-width: 56.25em) {
+        .card-picture-2 {
+          background-position: 35% 45%; } }
     .card-picture-3 {
       background-image: url("/img/tour3.webp"), linear-gradient(to right bottom, #7ed56f, #28b485); }
+      @media (max-width: 56.25em) {
+        .card-picture-3 {
+          background-position: 35% 45%; } }
   .card-heading {
     color: #fff;
     font-size: 2.8rem;
@@ -309,6 +330,9 @@ html {
     z-index: 10;
     transition: all 0.2s;
     outline-offset: 1.6rem; }
+    @media (max-width: 56.25em) {
+      .composition-photo {
+        padding: 10rem 0 10rem 0; } }
     .composition-photo--p1 {
       left: 0rem;
       top: -3.2rem; }
@@ -514,6 +538,14 @@ html {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      margin-bottom: 8rem;
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: '';
     display: table;
@@ -522,6 +554,13 @@ html {
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^='col-']:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^='col-'] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -544,6 +583,10 @@ html {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   position: relative; }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 94%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 94%); } }
   .header__logo-box {
     top: 1.5rem;
     left: 1.5rem;
@@ -572,6 +615,12 @@ html {
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.2s; }
+  @media (max-width: 56.25em) {
+    .heading-biketour {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-biketour {
+      font-size: 2.5rem; } }
   .heading-biketour:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.05);
     text-shadow: 0.2rem 0.4rem 0.8rem rgba(0, 0, 0, 0.5); }
@@ -581,6 +630,9 @@ html {
   padding: 6.4rem 0;
   font-size: 1.5rem;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 4rem 0; } }
   .footer-logo-box {
     text-align: center;
     margin-bottom: 3.2rem; }
@@ -592,6 +644,10 @@ html {
   .footer-navigation {
     border-top: 1px solid #faf7f7;
     padding-top: 3.2rem; }
+    @media (max-width: 56.25em) {
+      .footer-navigation {
+        width: 100%;
+        text-align: center; } }
   .footer-list {
     list-style: none; }
   .footer-item {
@@ -617,6 +673,14 @@ html {
     float: right;
     margin-right: -8rem;
     text-align: center; }
+    @media (max-width: 75em) {
+      .footer-copyright {
+        float: left; } }
+    @media (max-width: 56.25em) {
+      .footer-copyright {
+        width: 100%;
+        text-align: center;
+        margin-right: 0em; } }
   .footer-text {
     text-transform: uppercase; }
   .footer-text:hover {
@@ -640,6 +704,10 @@ html {
   z-index: 1000;
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation-button {
+      top: 3.6rem;
+      right: 3.6rem; } }
 
 .navigation-background {
   height: 6.4rem;
@@ -741,6 +809,9 @@ html {
   background-color: #faf7f7;
   padding: 32rem 0;
   margin-top: -15vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 25rem 0; } }
 
 .section-features {
   background-color: #faf7f7;
@@ -750,21 +821,33 @@ html {
   margin-top: -16rem; }
   .section-features > * {
     transform: skewY(7deg); }
+  @media (max-width: 56.25em) {
+    .section-features {
+      padding: 10rem 0; } }
 
 .section-tour {
   background-color: #faf7f7;
   margin-top: -16rem;
   padding: 40rem 0 19.2rem 0; }
+  @media (max-width: 56.25em) {
+    .section-tour {
+      padding: 27rem 0 10rem 0; } }
 
 .section-stories {
   position: relative;
   margin-top: 0rem;
-  padding: 12.8rem 0 14.4rem 0;
+  padding: 12rem 0 14rem 0;
   z-index: 100; }
+  @media (max-width: 56.25em) {
+    .section-stories {
+      padding: 10rem 0 10rem 0; } }
 
 .section-book {
   padding: 16rem 0 16rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  @media (max-width: 56.25em) {
+    .section-book {
+      padding: 10rem 0 10rem 0; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("/img/booking1.jpg");
@@ -773,6 +856,9 @@ html {
   height: 56rem;
   border-radius: 0.3rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 56.25em) {
+    .book {
+      background-position: 55% 25%; } }
   .book-form {
     padding: 8rem;
     width: 50%; }

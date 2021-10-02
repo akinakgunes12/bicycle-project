@@ -13,6 +13,11 @@
     z-index: 1000;
     text-align: center;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 3.6rem;
+      right: 3.6rem;
+    }
   }
   &-background {
     height: 6.4rem;
