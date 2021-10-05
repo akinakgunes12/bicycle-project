@@ -3,6 +3,20 @@
     margin-bottom: 1.6rem;
     font-size: $default-font-size;
   }
+  &-group-btn {
+    @include respond(big-desktop) {
+      margin-top: 3rem;
+    }
+    @include respond(desktop) {
+      margin-top: 3rem;
+    }
+    @include respond(tab-port) {
+      margin-top: 5rem;
+    }
+    @include respond(tab-land) {
+      margin-top: 2rem;
+    }
+  }
 
   &-input {
     font-size: $default-font-size;

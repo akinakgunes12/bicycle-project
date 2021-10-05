@@ -40,6 +40,13 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
     transition: all 0.5s;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+    @include respond(phone) {
+      width: 70%;
+    }
   }
   &:target &-content {
     opacity: 1;
@@ -48,6 +55,10 @@
   &-left {
     width: 33.3333333%;
     display: table-cell;
+
+    @include respond(phone) {
+      width: 0%;
+    }
   }
   &-right {
     width: 66.6666667%;
@@ -58,6 +69,9 @@
   &-img {
     display: block;
     width: 100%;
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
   &-text {
     font-size: 1.4rem;
@@ -66,5 +80,11 @@
     column-gap: 8rem;
     column-rule: 0.2rem solid $color-grey-light-1;
     hyphens: auto;
+    @include respond(phone) {
+      column-count: 1;
+    }
+    @include respond(tab-port) {
+      column-count: 1;
+    }
   }
 }

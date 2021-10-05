@@ -9,6 +9,22 @@
   line-height: 2.4rem;
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
   transform: skewX(-12deg);
+
+  @include respond(tab-port) {
+    width: 100%;
+    transform: skewX(-12deg);
+
+    &-text {
+      transform: translateX(2rem) skewX(12deg) !important;
+    }
+    &-heading {
+      transform: translateX(1rem) skewX(12deg) !important;
+    }
+    &-shape {
+      transform: translateY(0rem) translateX(3rem) skewX(12deg) !important;
+    }
+  }
+
   & > * {
     transform: skewX(12deg);
   }
@@ -22,15 +38,14 @@
   &-shape {
     width: 14.4rem;
     height: 14.4rem;
-    display: flex;
     float: left;
-    background-color: orangered;
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
+    background-color: rgb(77, 74, 74);
+    shape-outside: circle(50% at 40% 70%);
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
-    transform: translateX(-1.6rem) skewX(12deg);
+    transform: translateX(2rem) translateY(0rem) skewX(12deg);
     position: relative;
+    margin-right: 8rem;
   }
 
   &-caption {
