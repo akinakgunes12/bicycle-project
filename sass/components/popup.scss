@@ -8,6 +8,9 @@
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba($color-black, 0.3);
 
   &:target {
     opacity: 1;
@@ -42,9 +45,14 @@
     transition: all 0.5s;
 
     @include respond(tab-port) {
+      width: 80%;
+      height: 20%;
+    }
+
+    @include respond(phone) {
       width: 100%;
     }
-    @include respond(phone) {
+    @media only screen and (min-width: 400px) {
       width: 70%;
     }
   }
@@ -57,7 +65,7 @@
     display: table-cell;
 
     @include respond(phone) {
-      width: 0%;
+      display: none;
     }
   }
   &-right {
@@ -69,6 +77,10 @@
   &-img {
     display: block;
     width: 100%;
+
+    @include respond(tab-land) {
+      height: 35vh;
+    }
     @include respond(tab-port) {
       width: 100%;
     }
